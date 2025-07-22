@@ -1,14 +1,39 @@
-name: "Hello World Workflow"
+name: "CI/CD - Python App"
 
 on:
   push:
     branches:
       - master
       - production
+  pull_request:
+    branches:
+      - master
+      - production
 
 jobs:
-  hello_world:
+  build-and-run:
     runs-on: ubuntu-latest
+
     steps:
-      - name: "Print hello gyana"
-        run: echo "Hello,world!"
+      # Step 1: Checkout your code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  # You can change this if needed
+
+      # Step 3: Install dependencies (if requirements.txt exists)
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # Step 4: Run your Python script
+      - name: Run Python script
+        run: python main.py  # change this to your actual script name
+
+      # Optional: Echo success
+      - name: Job Done
+        run: echo "✅ Python script executed successfully!"
