@@ -1,0 +1,21 @@
+package PROJECTBEG.EXTRA;
+
+import java.util.Scanner;
+
+public class DEPRECITATION {
+    static void main() {
+        Scanner in = new Scanner(System.in);
+        double Cost_asset , Scrap_value , Useful_years , Decline;
+
+        System.out.println("Enter the value of an asset");
+        Cost_asset = in.nextDouble();
+
+        System.out.println("Enter the value of an scrap");
+        Scrap_value= in.nextDouble();
+
+        System.out.println("Enter the number of years u used that asset");
+        Useful_years = in.nextDouble();
+
+        Decline = (Cost_asset-Scrap_value)/Useful_years;
+        System.out.println("The deperciaton of this product which being decline day by day is :" + Decline);
+    }
