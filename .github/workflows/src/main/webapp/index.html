@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        p {
-            background-color: blue;
-            color: white;
+        *{
+            margin: 0;
+            padding: 0;
         }
+        body{
+            background-color: rgb(4, 3, 3);
+            padding: 45px;
+            
+        }
+        .card{
+            background-color: white;
+            width: 198px;
+            height: 394px;
+            border-radius: 17px;
+            padding: 0 34px 0;
 
-        div.p:first-child {
-            background-color: yellow;
-            color: red;
         }
-       
+        .image{
+            padding: 5px;
+            
+        }
+        .image img{
+            border-radius: 7px;
+        }
+        .content h2{
+            padding: 7px 12px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+        }
+        .content p{
+            font-size: 13px;
+            color: rgb(25, 88, 9);
+            font-family: 'Roboto';
+        }
+        
+        .capsules{
+            padding: 0 34px;
+        }
+        .capsules span{
+            border: 2px solid rgb(2, 13, 6);
+            padding: 1px 4px;
+            border-radius: 8px;
+            background-color: aquamarine;
+
+        }
+        .button{
+            text-align: center;
+        }
+        .button button{
+            padding: 4px 5px;
+            border-radius: 15px;
+            background-color: rgb(151, 212, 245);
+            color:rgb(8, 53, 31);
+            font-size: 12px;
+            margin-top: 3px;
+            border: none;
+            font-weight: bold;
+        }
     </style>
 </head>
-
 <body>
-     <div>
-        <img src="card.png" width="300px">   ← ADD THIS
-        <p>Lorem ipsum dolor sit amet...</p>
-        <p>I am another para</p>
-        <p>I am copy of another para</p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ut quisquam ratione maxime itaque odit
-            dolor deserunt assumenda ab molestias quos aliquid consequuntur impedit consectetur, facere veritatis iste
-            dolorem velit!</p>
-        <p>I am another para</p>
-        <p>I am copy of another para</p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ut quisquam ratione maxime itaque odit
-            dolor deserunt assumenda ab molestias quos aliquid consequuntur impedit consectetur, facere veritatis iste
-            dolorem velit!</p>
-        <p>I am another para</p>
-        <p>I am copy of another para</p>
+    <div class="card">
+        <div class="image"> 
+            <img width="188px" src="card.png" alt="">
+        </div>
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Lake</span>
+
+        </div>
+        <div class="content">
+            <h2>GRT</h2>
+           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora magni nesciunt quod unde aspernatur saepe ratione, ab voluptates in ullam. Animi, fugiat tempore.</p> 
+        </div>
+        <div class="button">
+            <button>Read more</button>
+        </div>
+
     </div>
 </body>
-
 </html>
